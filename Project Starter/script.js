@@ -15,6 +15,7 @@ function  blurring() {
 
     loadText.innerText = `${load}%`
     loadText.style.opractiy = scale(load, 0, 100, 1, 0)
+    bg.style.filter = `blur(${scale(load, 0, 100, 30, 0)}px)`
  }
 
  // https://stackoverflow.com/questions/10756313/javascript-jquery-map-a-range-of-numbers-to-another-range-of-numbers
