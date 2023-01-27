@@ -13,7 +13,6 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-
     height: 100vh;
     overflow: hidden;
     margin: 0;
@@ -47,12 +46,12 @@ h1 {
     padding: 1.5rem;
 }
 
-.split.left.btn:hover {
+.split.left .btn:hover {
     background-color: var(--left-btn-hover-color);
     border-color: var(--left-btn-hover-color);
 }
 
-.split.right.btn:hover {
+.split.right .btn:hover {
     background-color: var(--right-btn-hover-color);
     border-color: var(--right-btn-hover-color);
 }
@@ -66,7 +65,7 @@ h1 {
 
 .split {
     position: absolute;
-    width: 100%;
+    width: 50%;
     height: 100%;
     overflow: hidden;
 }
