@@ -53,6 +53,10 @@ body {
   transform: scale(0.98);
 }
 
+.text {
+  margin-top: 30px;
+}
+
 .form-control {
   position: relative;
   margin: 20px 0 40px;
@@ -73,4 +77,10 @@ body {
 .form-control input:focus,
 .form-control input:invalid {
   outline: 0;
+}
+
+.form-control label {
+  position: absolute;
+  top: 15px;
+  left: 0;
 }
