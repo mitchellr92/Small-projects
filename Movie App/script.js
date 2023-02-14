@@ -24,11 +24,35 @@ function showMovies(movies) {
   main.innerHTML = "";
 
   movies.forEach((movies) => {
-    const { title, poster_path, cote_average, overview } = movies;
+    const { title, poster_path, vote_average, overview } = movies;
 
     const movieEl = document.createElement("div");
     movieEl.classList.add("movie");
+
+    movieEl.innerHTML = `
+        <img src="${IMG_PATH + poster_path}" alt="${title}" />
+        <div class="movie-info">
+          <h3>${title}</h3>
+          <span class="${getClassByVote(vote_average)}">${vote_average}</span>
+        </div>
+        <div class="overview">
+          <h3>Overview</h3>
+          ${overview}
+        </div>
+    `;
+
+    main.appendChild(movieEl);
   });
+}
+
+function getClassByVote(vote) {
+  if (vote >= 8) {
+    return "green";
+  } else if (vote >= 5) {
+    return "orange";
+  } else {
+    return "red";
+  }
 }
 
 form.addEventListener("submit", (e) => {
